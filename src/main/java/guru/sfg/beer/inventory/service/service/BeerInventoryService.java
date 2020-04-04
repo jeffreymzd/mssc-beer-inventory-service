@@ -32,6 +32,6 @@ public class BeerInventoryService {
                 .beerUpc(beerDto.getUpc())
                 .quantityOnHand(beerDto.getQuantityOnHand())
                 .build();
-        beerInventoryRepository.save(beerInventory);
+        beerInventoryRepository.saveAndFlush(beerInventory);
     }
 }
