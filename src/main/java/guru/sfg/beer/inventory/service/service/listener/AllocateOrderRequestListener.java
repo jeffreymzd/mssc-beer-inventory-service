@@ -33,6 +33,7 @@ public class AllocateOrderRequestListener {
         AllocateOrderResult.AllocateOrderResultBuilder builder =
                 AllocateOrderResult.builder();
         builder.beerOrderDto(beerOrderDto);
+        builder.allocationError(false);
 
         try {
             Boolean allocationResult = allocationService.allocateOrder(beerOrderDto);
