@@ -47,7 +47,6 @@ public class AllocateOrderRequestListener {
             builder.allocationError(true);
         }
 
-
         jmsTemplate.convertAndSend(JmsConfiguration.ALLOCATE_ORDER_RESPONSE_QUEUE,
                 builder.build());
     }
