@@ -36,7 +36,7 @@ public class DeallocateOrderRequestListener {
         builder.allocationError(false);
 
         try {
-            Boolean deallocationResult = deallocationService.deallocateOrder(beerOrderDto);
+            deallocationService.deallocateOrder(beerOrderDto);
         } catch (Exception e) {
             log.error("Deallocation failed for order id: " + beerOrderDto.getId());
             builder.allocationError(true);
